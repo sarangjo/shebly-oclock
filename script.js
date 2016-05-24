@@ -1,9 +1,9 @@
 // Initialize Firebase
 var config = {
-apiKey: "AIzaSyCgqUGW3dxiBfzf1KnLrCgk_FYtTtVOqmU",
-authDomain: "shipla-oclock-72aee.firebaseapp.com",
-databaseURL: "https://shipla-oclock-72aee.firebaseio.com",
-storageBucket: "",
+  apiKey: "AIzaSyCgqUGW3dxiBfzf1KnLrCgk_FYtTtVOqmU",
+  authDomain: "shipla-oclock-72aee.firebaseapp.com",
+  databaseURL: "https://shipla-oclock-72aee.firebaseio.com",
+  storageBucket: "",
 };
 var database;
 
@@ -27,4 +27,6 @@ function logShiplaOClock() {
   var id = database.ref('logs').push().key;
 
   database.ref('logs/' + id).set(postData);
+
+  alert("Thanks for your submission!");
 }
