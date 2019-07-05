@@ -20,7 +20,6 @@ function logShiplaOClock() {
 
   var postData = {
     dateTime: now.toJSON(),
-    timeZone: now.getTimezoneOffset(),
     contributor: null
   };
 

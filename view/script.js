@@ -16,7 +16,6 @@ window.onload = function() {
 	logs = [];
 	tableHeaders = document.getElementById("headers");
 	tableData = document.getElementById("data");
-	myTimeZone = new Date().getTimezoneOffset();
 
 	initialize();
 
@@ -29,13 +28,12 @@ window.onload = function() {
 }
 
 var logs;
-var myTimeZone;
 
 function initialize() {
 	for (var i = 0; i < 24; i++) {
 		// Header
 		var header = document.createElement("th");
-		header.innerHTML = i;
+		header.innerHTML = moment("" + i, "H").format("ha") + "&ndash;" + moment("" + (i+1 % 24), "H").format("ha");
 		tableHeaders.appendChild(header);
 
 		// Data
